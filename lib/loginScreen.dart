@@ -7,7 +7,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  bool? isRememberMe = false;
+  bool? isRememberMe = true;
 
   Widget buildEmail() {
     return Column(
@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
             decoration: InputDecoration(
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.only(top: 14),
-                prefixIcon: Icon(Icons.email, color: Color(0xff5ac18e)),
+                prefixIcon: Icon(Icons.email, color: Color(0xff348feb)),
                 hintText: 'Email',
                 hintStyle: TextStyle(color: Colors.black38)),
           ),
@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Password',
+          'Senha',
           style: TextStyle(
               color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
         ),
@@ -70,8 +70,8 @@ class _LoginScreenState extends State<LoginScreen> {
             decoration: InputDecoration(
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.only(top: 14),
-                prefixIcon: Icon(Icons.lock, color: Color(0xff5ac18e)),
-                hintText: 'Password',
+                prefixIcon: Icon(Icons.lock, color: Color(0xff348feb)),
+                hintText: 'Senha',
                 hintStyle: TextStyle(color: Colors.black38)),
           ),
         )
@@ -83,12 +83,12 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       alignment: Alignment.centerRight,
       child: TextButton(
-          onPressed: () => print("Forgot Password pressed!"),
+          onPressed: () => print("Esqueceu senha clicado"),
           style: TextButton.styleFrom(
             padding: EdgeInsets.only(right: 0),
           ),
           child: Text(
-            'Forgot Password?',
+            'Esqueceu a senha?',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           )),
     );
@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Text(
-            'Remember me',
+            'Mantenha logado',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -139,13 +139,39 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         child: Text(
-          'Login',
+          'Log In',
           style: TextStyle(
-              color: Color(0xff5ac18e),
+              color: Color(0xff348feb),
               fontSize: 18,
               fontWeight: FontWeight.bold),
         ),
-        onPressed: () => print('Login Pressed'),
+        onPressed: () => print('Login clicado'),
+      ),
+    );
+  }
+
+  Widget buildSignUpBtn() {
+    return GestureDetector(
+      onTap: () => {print('Sign Up clicado')},
+      child: RichText(
+        text: TextSpan(children: [
+          TextSpan(
+            text: 'Não possui conta? ',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          TextSpan(
+            text: 'Cadastre-se',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          )
+        ]),
       ),
     );
   }
@@ -166,10 +192,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                      Color(0x665ac18e),
-                      Color(0x995ac18e),
-                      Color(0xcc5ac18e),
-                      Color(0xff5ac18e),
+                      Color(0xff348feb),
+                      Color(0xcc348feb),
+                      Color(0x99348feb),
+                      Color(0x66348feb),
                     ])),
                 child: SingleChildScrollView(
                   physics: AlwaysScrollableScrollPhysics(),
@@ -178,7 +204,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Sign In',
+                        'Faça seu Login',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
@@ -193,7 +219,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       buildForgotPassBtn(),
                       buildRememberCb(),
                       buildLoginBtn(),
-                      // build
+                      buildSignUpBtn(),
                     ],
                   ),
                 ),
