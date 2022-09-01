@@ -1,16 +1,23 @@
-# login_page
+# Login page layout
 
-A new Flutter project.
+## Professor 
+- Fabricio Bizotto
 
-## Getting Started
+## Aluno 
+- Guilherme P do Amarilho
 
-This project is a starting point for a Flutter application.
+## Atividades
+- Primeiro contato com o flutter
 
-A few resources to get you started if this is your first Flutter project:
+> ### Descrição
+> 
+>Crie seu primeiro aplicativo com pelo menos:<br>
+>   - 1 tela que implemente o componente Scaffold com Appbar e Body;<br>
+>   - Componentes de texto;<br>
+>   - Componente de botão ou ícone para executar alguma ação;<br>
+>   - Componente de coluna ou linha (Column ou Row);<br>
+>   - Utilizar a função setState para gerenciar o estado da tela de alguma forma;<br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Imagem referência
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Img referência tela login]()
